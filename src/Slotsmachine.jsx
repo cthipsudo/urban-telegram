@@ -2,11 +2,9 @@ function SlotsMachine({ slot1, slot2, slot3 }) {
   const winStatus = slot1 === slot2 && slot1 === slot3 && slot2 === slot3;
   return (
     <main>
-      <h1 style={{ display: "inline-block" }}>{slot1}</h1>
-      <h1 style={{ display: "inline-block" }}>|</h1>
-      <h1 style={{ display: "inline-block" }}>{slot2}</h1>
-      <h1 style={{ display: "inline-block" }}>|</h1>
-      <h1 style={{ display: "inline-block" }}>{slot3}</h1>
+      <h1>
+        {slot1}|{slot2}|{slot3}
+      </h1>
       <h2 style={{ color: winStatus ? "green" : "red" }}>
         {winStatus ? "You win!!" : "You Lose..."}
       </h2>
